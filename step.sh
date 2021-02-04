@@ -1,7 +1,12 @@
 #!/bin/bash
 set -ex
 
-echo "This is the value specified for the input 'example_step_input': ${example_step_input}"
+./scripts/deploy_framework.sh \
+  $xcframework_path \
+  $release_version \
+  $framework_metadata_files \
+  $release_repo_url \
+  $pod_repo_url
 
 #
 # --- Export Environment Variables for other Steps:

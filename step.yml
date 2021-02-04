@@ -57,25 +57,48 @@ deps:
   - name: git
   - name: wget
 
-
 toolkit:
   bash:
     entry_file: step.sh
 
-
 inputs:
-  - example_step_input: Default Value - you can leave this empty if you want to
+  - xcframework_path:
     opts:
-      title: "Example Step Input"
-      summary: Summary. No more than 2-3 sentences.
+      title: "XCFramework path"
+      summary: Locations of the XCFramework to deploy
       description: |
-        Description of this input.
-
-        Can be Markdown formatted text.
+        Locations of the XCFramework to deploy
       is_expand: true
       is_required: true
-      value_options: []
-
+  - release_version:
+    opts:
+      title: Release Version
+      summary: Version of the framework to deploy
+      description: as above
+      is_expand: true
+      is_required: true
+  - framework_metadata_files:
+    opts:
+      title: "Framework metadata directory"
+      summary: "Directory containing metadata files to deploy"
+      description: |
+        Files might include Swift Package Manager package description, podspec and license file.
+      is_expand: true
+      is_required: true
+  - release_repo_url:
+    opts:
+      title: "Framework repo URL"
+      summary: "URL of the repo to deploy framework to"
+      description: "URL of the repo to deploy framework to"
+      is_expand: true
+      is_required: true
+  - pod_repo_url:
+    opts:
+      title: "Private pod repo URL"
+      summary: "URL of the repo to deploy podspec to"
+      description: "URL of the repo to deploy podspec to"
+      is_expand: true
+      is_required: false
 outputs:
   - EXAMPLE_STEP_OUTPUT:
     opts:
