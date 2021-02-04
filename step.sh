@@ -1,7 +1,7 @@
 #!/bin/bash
 set -ex
 
-./scripts/deploy_xcframework.sh \
+deploy_xcframework.sh \
   $xcframework_path \
   $release_version \
   $framework_metadata_files \
