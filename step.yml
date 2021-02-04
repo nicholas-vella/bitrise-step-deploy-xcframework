@@ -99,12 +99,3 @@ inputs:
       description: "URL of the repo to deploy podspec to"
       is_expand: true
       is_required: false
-outputs:
-  - EXAMPLE_STEP_OUTPUT:
-    opts:
-      title: "Example Step Output"
-      summary: Summary. No more than 2-3 sentences.
-      description: |
-        Description of this output.
-
-        Can be Markdown formatted text.
