@@ -1,7 +1,9 @@
 #!/bin/bash
 set -ex
 
-deploy_xcframework.sh \
+THIS_SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
+$THIS_SCRIPT_DIR/deploy_xcframework.sh \
   $xcframework_path \
   $release_version \
   $framework_metadata_files \
