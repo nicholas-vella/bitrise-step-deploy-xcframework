@@ -60,8 +60,8 @@ git push --tags
 if [ ! -z $POD_REPO_URL ]
 then
   pod repo add $POD_REPO_NAME $POD_REPO_URL
-  pod spec lint --allow-warnings
-  pod repo push --allow-warnings $POD_REPO_NAME $(basename $COCOAPODS_SPEC_TEMPLATE)
+  pod spec lint --allow-warnings --skip-import-validation --private
+  pod repo push --allow-warnings --skip-import-validation $POD_REPO_NAME $(basename $COCOAPODS_SPEC_TEMPLATE)
 fi
 
 echo Success
